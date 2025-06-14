@@ -1,98 +1,265 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Saya</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
     body {
-      background-color: #121212;
-      color: #e0e0e0;
+        background-color: #121212;
+        color: #e0e0e0;
     }
+
     .card {
-      background-color: #1e1e1e;
-      border: none;
+        background-color: #1e1e1e;
+        border: none;
     }
-    .card-title, .card-text {
-      color: #fff;
+
+    .card-title,
+    .card-text {
+        color: #fff;
     }
+
     .navbar {
-      background-color: #1f1f1f;
+        background-color: #1f1f1f;
     }
-    .nav-link, .navbar-brand {
-      color: #e0e0e0;
+
+    .nav-link,
+    .navbar-brand {
+        color: #e0e0e0;
     }
+
     .nav-link:hover {
-      color: #fff;
+        color: #fff;
     }
-  </style>
+
+    .carousel-inner {
+        height: 250px; /* Tetapkan tinggi carousel agar semua sama */
+        overflow: hidden;
+    }
+
+    .carousel-inner img {
+        height: 100%;
+        object-fit: cover; /* Menjaga proporsi tanpa distorsi */
+    }
+
+    .text-gradient {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+</style>
+
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Portofolio</a>
+
+    <!-- Header Nama dan Foto -->
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portofolio</a>
+        </div>
+    </nav>
+    <header class="container py-5">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-md-8">
+            <h1 class="fw-bold display-4 text-gradient">IMAM BAIHAQI</h1>
+            <p class="lead text-light" >💻 Web Developer &nbsp;|&nbsp; ⚙️ Programmer &nbsp;|&nbsp; 🚀 Tech Enthusiast &nbsp;|&nbsp; 👩‍💻High School Student</p>
+        </div>
+        <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
+            <a href="#tentang" class="btn btn-outline-light btn-lg">Tentang Saya</a>
+        </div>
     </div>
-  </nav>
+</header>
 
-  <div class="container mt-5">
-    <h1 class="text-center mb-4">Tentang Saya</h1>
-    <p class="text-center">Saya adalah seorang pengembang web dengan keahlian dalam HTML, CSS, JavaScript, Bootstrap, dan Python.</p>
 
-    <h2 class="mt-5">Projek Saya</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Projek 1: Website Toko Online</h5>
-            <p class="card-text">Sistem e-commerce sederhana menggunakan HTML, CSS, dan JavaScript.</p>
-          </div>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Tentang Saya</h1>
+        <p class="text-center">Saya adalah seorang pengembang web dengan keahlian dalam HTML, CSS, JavaScript,
+            Bootstrap, dan Python.</p>
+
+        <h2 class="mt-5">Projek Saya</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
+            <!-- Projek 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Projek 1: Web E-commer Kerajinan Tangan</h5>
+                        <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/P1(2).jpeg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P1(1).jpeg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P1(3).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                               
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p class="card-text">web penjualan kerajinan tangan dibuat dengan HTML JQuery Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projek 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Projek 2: Web Pemesanan Hotel</h5>
+                        <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/P2(1).jpeg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P2(2).jpeg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P2(3).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P2(4).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P2(5).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P2(6).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p class="card-text">Aplikasi pemesanan hotel menggunakan HTML, Bootstrap, ExpresJS, NodeJS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projek 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Projek 3: Login Django</h5>
+                        <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/P3(1).jpeg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P3(2).jpeg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p class="card-text">Register,Login,Logout Mengunakan Django</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projek 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Projek 4: CRUD siswa</h5>
+                        <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/P4(1).jpeg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P4(2).jpeg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P4(3).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p class="card-text">CRUD berbasis mobile menngunaka TypeScript,React Native,React,Axios,PHP(BE)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projek 5 -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Projek 5: Mysavings</h5>
+                        <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/P5(1).jpeg" class="d-block w-100" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P5(2).jpeg" class="d-block w-100" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/P5(3).jpeg" class="d-block w-100" alt="Slide 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <p class="card-text">aplikasi pengelola tabungan, dibuat menggunakan JAVA </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Projek 2: Aplikasi To-Do List</h5>
-            <p class="card-text">Aplikasi manajemen tugas berbasis JavaScript dan localStorage.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Projek 3: Website Portfolio</h5>
-            <p class="card-text">Situs pribadi untuk menampilkan karya dan keahlian saya, dibuat dengan Bootstrap.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Projek 4: API Cuaca</h5>
-            <p class="card-text">Mengambil data cuaca dari API OpenWeather menggunakan JavaScript.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Projek 5: Aplikasi Data Mahasiswa</h5>
-            <p class="card-text">CRUD aplikasi menggunakan Python Flask dan Bootstrap.</p>
-          </div>
-        </div>
-      </div>
+
+        <h2 class="mt-5">Keahlian</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap</li>
+            <li>Python & Flask</li>
+            <li>Git & GitHub</li>
+        </ul>
     </div>
 
-    <h2 class="mt-5">Keahlian</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>Bootstrap</li>
-      <li>Python & Flask</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
